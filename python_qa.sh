@@ -5,7 +5,7 @@ qa ()
         echo "Usage: $FUNCNAME <project_path_or_python_filename>";
         return;
     else
-        flake8 "$1" | pcregrep -v "E501|E272|E221|E225|E303|W601|E302|E502|W291|E261|E262|W391|E127|E128|E126|E123|E125|E124|E711|E712|E121|E111";
+        flake8 --ignore=E501,E272,E221,E225,E303,W601,E302,E502,W291,E261,E262,W391,E127,E128,E126,E123,E125,E124,E711,E712,E121,E111,E265,E131,E226,E241 "$1"
     fi
 }
 

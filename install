@@ -4,7 +4,8 @@ pushd $(dirname $(readlink -f "$BASH_SOURCE")) > /dev/null
 ROOT_DIR=$(pwd)
 popd > /dev/null
 
-echo "source $ROOT_DIR/main.sh" >> ~/.bash_profile
+echo "export PYTHONDEVENV=$ROOT_DIR
+source \$PYTHONDEVENV/main.sh" >> ~/.bash_profile
 
 echo "setlocal tabstop=4
 setlocal softtabstop=4
